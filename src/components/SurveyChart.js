@@ -10,8 +10,8 @@ const SurveyChart = () => {
 
     useEffect(() => {
         Promise.all([
-            fetch('http://localhost:3001/answer').then((res) => res.json()),
-            fetch('http://localhost:3001/survey').then((res) => res.json())
+            fetch('https://fornode-ldoyg.run.goorm.io/answer').then((res) => res.json()),
+            fetch('https://fornode-ldoyg.run.goorm.io/survey').then((res) => res.json())
         ])
             .then(([answer, survey]) => {
                 setAnswer(answer.data)
